@@ -1,6 +1,6 @@
 browser.menus.create({
-    id: "ffckit",
-    title: "Fuck it",
+    id: "removeoverlay",
+    title: "Remove Overlay",
     contexts: ["all"],
 	icons: {
 		"16": "icons/menu-16.png",
@@ -8,7 +8,7 @@ browser.menus.create({
 	  }
 });
 browser.menus.onClicked.addListener((info, tab) => {
-    if (info.menuItemId === "ffckit") {
+    if (info.menuItemId === "removeoverlay") {
 		browser.tabs.executeScript({
 		  code: `browser.menus.getTargetElement(${info.targetElementId}).remove();`
 		});
